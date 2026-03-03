@@ -8,7 +8,7 @@ Este proyecto implementa un sistema de matching semántico entre:
 - Indicadores de producto de los PATR
 - Catálogo estructurado de indicadores de los PDT (MGA / SisPT)
 
-El objetivo es identificar, para cada subprograma de PATR, los indicadores de producto MGA más similares en significado utilizando modelos basados en transformers.
+El objetivo es identificar, para cada indicador de producto de PATR, los indicadores de producto MGA más similares en significado utilizando modelos basados en transformers.
 
 ---
 
