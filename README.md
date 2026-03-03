@@ -5,10 +5,10 @@
 
 Este proyecto implementa un sistema de matching semántico entre:
 
-- Indicadores de proyectos (PATR)
-- Catálogo estructurado de indicadores o políticas (MGA / SisPT)
+- Indicadores de producto de los PATR
+- Catálogo estructurado de indicadores de los PDT (MGA / SisPT)
 
-El objetivo es identificar, para cada proyecto, los indicadores del catálogo más similares en significado utilizando modelos basados en transformers.
+El objetivo es identificar, para cada subprograma de PATR, los indicadores de producto MGA más similares en significado utilizando modelos basados en transformers.
 
 ---
 
@@ -23,7 +23,7 @@ Cada texto se convierte en un embedding usando modelos como:
 - `BAAI/bge-m3`
 - `intfloat/multilingual-e5-large`
 
-Los embeddings se normalizan y se calcula la similitud coseno entre proyectos y políticas.
+Los embeddings se normalizan y se calcula la similitud coseno entre estructura programática PATR e indicadores de producto MGA.
 
 Luego se recuperan los Top-N candidatos más similares mediante k-Nearest Neighbors.
 
@@ -37,7 +37,7 @@ Esta etapa es:
 
 ### 2. Re-Ranking con Cross-Encoder (Opcional)
 
-En esta etapa, un cross-encoder evalúa cada par proyecto-política de forma conjunta.
+En esta etapa, un cross-encoder evalúa cada par indicadores producto PATR-indicador producto MGA de forma conjunta.
 
 Modelo recomendado:
 
